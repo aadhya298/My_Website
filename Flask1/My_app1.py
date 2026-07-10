@@ -1,0 +1,22 @@
+from flask import Flask, render_template, request
+
+app=Flask (__name__)
+@app.route("/")
+def home():
+    return render_template("index.html")
+
+@app.route("/calculate", methods=["POST"])
+def calculate():
+    units=int(request.form ["units"])
+    bill=units*5
+    if units <= 1148:
+        message = "Great! You are an energy saver!"
+    elif units <= 2:
+        message = "Not bad. Try saving a little more!"
+    else:
+        message= "Whoa! Time to switch off some lights"
+    
+    return render_template('index.html', units=units,bill=bill,message=message)
+
+if __name__=='__main__':
+    app.run(debug=True)

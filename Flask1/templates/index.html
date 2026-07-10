@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electricity Bill Estimator</title>
+</head>
+<body>
+    <h1>ELECTRICTY BILL ESTIMATOR</h1>
+    <p>Enter your monthly units to find out your bill</p>
+
+    <form action="/calculate" method="POST">
+        <label>Units Consumed</label>
+        <input type="number" name="units" placeholder="e.g.150" required>
+        <button type="submit">Calculate</button>
+    </form>
+
+    {% if bill %}
+    <div class="result">
+        <h2>Units used: {{ units }}</h2>
+        <h2>Total Bill: {{ bill }}</h2>
+        <p>{{message}}</p>
+    </div>
+    {% endif %}
+</body>
+</html>

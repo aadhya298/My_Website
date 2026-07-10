@@ -1,0 +1,10 @@
+.base{
+    background-image:url("sunset-beach-ai-generated_268835-11222.avif");
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-size: cover;
+}
+.options{
+    margin-left: 350px;
+    border-radius:999px;
+}
