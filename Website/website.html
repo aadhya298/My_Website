@@ -1,107 +1,225 @@
-<html>
-    <head>
-        <title></title>
-        <link rel="stylesheet" href="website.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Your Space to Reset</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
         integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    </head>
-    <body class="base">
-        <header>
-            <br>
-            <button class="btn btn-outline-dark btn-sm rounded-pill options">Track</button>
-            <button class="btn btn-outline-dark btn-sm rounded-pill options">Relax</button>
-            <br>
-            <br>
-            <br>
-            <div class="container">
-                <div class="row">
-                    <div class="col-3 p-2">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="card-title">HAPPY</div>
-                                <div class="card-text">I'm feeling .....</div>
-                                <br>
-                                <button class="btn btn-outline-danger btn-sm">That's me!</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-3 p-2">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="card-title">SAD</div>
-                                <div class="card-text">I'm feeling .....</div>
-                                <br>
-                                <button class="btn btn-outline-danger btn-sm">That's me!</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-3 p-2">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="card-title">ANXIOUS</div>
-                                <div class="card-text">I'm feeling .....</div>
-                                <br>
-                                <button class="btn btn-outline-danger btn-sm">That's me!</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-3 p-2">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="card-title">DISGUSTING</div>
-                                <div class="card-text">I'm feeling .....</div>
-                                <br>
-                                <button class="btn btn-outline-danger btn-sm">That's me!</button>
-                            </div>
+    <!-- Your CSS goes AFTER Bootstrap so it can override it -->
+    <link rel="stylesheet" href="website.css">
+</head>
+ 
+<body class="base">
+    <!-- Nav is now its own sticky bar, outside the hero image -->
+    <nav class="top sticky-top">
+        <h3 class="brand">EmoSync...</h3>
+        <h6 class="brand1"><sub>Synchronize your mind with your emotions</sub></h6>
+    </nav>
+ 
+    <header class="head"></header>
+ 
+    <section>
+        <div class="container">
+            <div class="row intro align-items-center">
+                <div class="col-12 col-md-8">
+                    <h5>What you can't say owns you &amp; what you hide controls you!</h5>
+                    <h5>Your space to reset.</h5>
+                    <h6>Quick, easy techniques to help you manage tough emotions — whenever you need them.</h6>
+                    <p>We all have days when our emotions feel too big to handle — a racing mind, a heavy heart, a knot in the stomach that won't go away. This space was created to offer simple, accessible tools to help you navigate those moments. Whether you're feeling anxious, angry, sad, or just overwhelmed, you'll find practical activities here to help you breathe easier, think clearer, and feel more balanced.</p>
+                </div>
+                <div class="col-12 col-md-4 text-center">
+                    <img src="pic.jpg" alt="Calming illustration" height="250" width="250">
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    <section class="mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-md-3 p-3">
+                    <div class="card text-white fw-bold mood1">
+                        <div class="card-body">
+                            <div class="card-title">HAPPY</div>
+                            <div class="card-text">Happiness feels like lightness in your chest and a natural urge to smile. Your energy rises, colors seem brighter, and connecting with others feels easy. It signals that your needs are being met, and your mind is at peace.</div>
+                            <br>
+                            <button class="btn btn-danger btn-sm" id="happy"><a href="#solutions" class="marks">That's me!</a></button>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-3 p-2">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="card-title">ANGRY</div>
-                                <div class="card-text">I'm feeling .....</div>
-                                <br>
-                                <button class="btn btn-outline-danger btn-sm">That's me!</button>
-                            </div>
+                <div class="col-6 col-md-3 p-3">
+                    <div class="card text-white fw-bold mood2">
+                        <div class="card-body">
+                            <div class="card-title">SAD</div>
+                            <div class="card-text">Sadness feels like a heavy weight on your chest. Energy drops, joy fades, and simple tasks feel exhausting. You may feel tearful, lonely, or numb. It signals loss or an unmet need for comfort, rest, or connection. Be kind to yourself.</div>
+                            <br>
+                            <button class="btn btn-danger btn-sm" id="sad"><a href="#solutions" class="marks">That's me!</a></button>
                         </div>
                     </div>
-                    <div class="col-3 p-2">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="card-title">BUTTERFLIES IN STOMACH</div>
-                                <div class="card-text">I'm feeling .....</div>
-                                <br>
-                                <button class="btn btn-outline-danger btn-sm">That's me!</button>
-                            </div>
+                </div>
+                <div class="col-6 col-md-3 p-3">
+                    <div class="card text-white fw-bold mood3">
+                        <div class="card-body">
+                            <div class="card-title">ANXIOUS</div>
+                            <div class="card-text">Anxiety feels like being on edge, as if something bad may happen even when nothing is wrong. Your heart races, breathing turns shallow, and muscles tense. Your mind keeps scanning for danger. The alarm is often louder than the threat.</div>
+                            <br>
+                            <button class="btn btn-danger btn-sm" id="anx"><a href="#solutions" class="marks">That's me!</a></button>
                         </div>
                     </div>
-                    <div class="col-3 p-2">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="card-title">NERVOUS</div>
-                                <div class="card-text">I'm feeling .....</div>
-                                <br>
-                                <button class="btn btn-outline-danger btn-sm">That's me!</button>
-                            </div>
+                </div>
+                <div class="col-6 col-md-3 p-3">
+                    <div class="card text-white fw-bold mood4">
+                        <div class="card-body">
+                            <div class="card-title">DISGUSTING</div>
+                            <div class="card-text">Disgust is a sudden urge to recoil or get clean. You may feel nauseous, shiver, or want distance from something. It can come from physical things or from betrayal and dishonesty. It signals something crosses your boundaries or values.</div>
+                            <br>
+                            <button class="btn btn-danger btn-sm" id="disg"><a href="#solutions" class="marks">That's me!</a></button>
                         </div>
                     </div>
-                    <div class="col-3 p-2">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="card-title">OVERTHINKING</div>
-                                <div class="card-text">I'm feeling .....</div>
-                                <br>
-                                <button class="btn btn-outline-danger btn-sm">That's me!</button>
-                            </div>
+                </div>
+                <div class="col-6 col-md-3 p-3">
+                    <div class="card text-white fw-bold mood5">
+                        <div class="card-body">
+                            <div class="card-title">ANGRY</div>
+                            <div class="card-text">Anger feels like heat rising, with a tight jaw, clenched fists, and a pounding heart. Patience shrinks and you want to defend or lash out. It often signals a crossed boundary or injustice, and may hide hurt, fear, or deep frustration.</div>
+                            <br>
+                            <button class="btn btn-danger btn-sm" id="angry"><a href="#solutions" class="marks">That's me!</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 p-3">
+                    <div class="card text-white fw-bold mood6">
+                        <div class="card-body">
+                            <div class="card-title">KNOTS IN STOMACH</div>
+                            <div class="card-text">A knot in the stomach is a tight, twisting, or sinking feeling in your belly, sometimes with nausea or a lost appetite. Your gut and brain are closely linked, so stress, dread, or fear show up there. It says something needs attention.</div>
+                            <br>
+                            <button class="btn btn-danger btn-sm" id="knot"><a href="#solutions" class="marks">That's me!</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 p-3">
+                    <div class="card text-white fw-bold mood7">
+                        <div class="card-body">
+                            <div class="card-title">NERVOUS</div>
+                            <div class="card-text">Nervousness is a jittery mix of excitement and worry before something important, like an exam or an interview. You may have  a dry mouth, or shaky hands. It is milder than anxiety, and fades once you begin with the task.</div>
+                            <br>
+                            <button class="btn btn-danger btn-sm" id="nervous"><a href="#solutions" class="marks">That's me!</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 p-3">
+                    <div class="card text-white fw-bold mood8">
+                        <div class="card-body">
+                            <div class="card-title">OVERTHINKING</div>
+                            <div class="card-text">Overthinking is a mind that will not switch off. Thoughts loop, replay old conversations, and spin endless what-ifs, leaving you tired. The mind believes more thinking means more safety, but it often adds stress.</div>
+                            <br>
+                            <button class="btn btn-danger btn-sm" id="over"><a href="#solutions" class="marks">That's me!</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 p-3">
+                    <div class="card text-white fw-bold mood9">
+                        <div class="card-body">
+                            <div class="card-title">LONELINESS</div>
+                            <div class="card-text">Loneliness feels like an empty ache, a gap between you and other people even in a crowd. You may feel unheard, withdrawn, or restless. It signals a need for connection, so reach out to a friend, even with a short text or a call today.</div>
+                            <br>
+                            <button class="btn btn-danger btn-sm" id="lonely"><a href="#solutions" class="marks">That's me!</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 p-3">
+                    <div class="card text-white fw-bold mood10">
+                        <div class="card-body">
+                            <div class="card-title">GUILTY</div>
+                            <div class="card-text">Guilt feels like a heavy, nagging weight in your chest and stomach, with replaying thoughts of what you did or failed to do. It signals that your actions clash with your values, and it urges you to apologize, learn, and make it right..</div>
+                            <br>
+                            <button class="btn btn-danger btn-sm" id="gulit"><a href="#solutions" class="marks">That's me!</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 p-3">
+                    <div class="card text-white fw-bold mood11">
+                        <div class="card-body">
+                            <div class="card-title">OVERWHELMED</div>
+                            <div class="card-text">Feeling overwhelmed is like drowning in too many pressures all at once. Your mind freezes, your chest tightens, and everything feels urgent. It signals that your load exceeds your capacity right now, so pause, breathe, and prioritize.</div>
+                            <br>
+                            <button class="btn btn-danger btn-sm" id="overwhelmed"><a href="#solutions" class="marks">That's me!</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 p-3">
+                    <div class="card text-white fw-bold mood12">
+                        <div class="card-body">
+                            <div class="card-title">OVEREXCITED</div>
+                            <div class="card-text">Overexcitement feels like a bubbly, fizzy energy, with a racing heart, wide eyes, and restless feet. Your mind leaps ahead to what is coming. It signals that something matters to you, so channel this energy into preparing and enjoying it.</div>
+                            <br>
+                            <button class="btn btn-danger btn-sm" id="excited"><a href="#solutions" class="marks">That's me!</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 p-3">
+                    <div class="card text-white fw-bold mood13">
+                        <div class="card-body">
+                            <div class="card-title">BORED</div>
+                            <div class="card-text">Boredom feels like restless emptiness, where time drags, nothing seems interesting, and your mind wanders away. You may feel sluggish, flat, or irritable. It signals a need for stimulation, meaning, or challenge, so try something new.</div>
+                            <br>
+                            <button class="btn btn-danger btn-sm" id="bore"><a href="#solutions" class="marks">That's me!</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 p-3">
+                    <div class="card text-white fw-bold mood14">
+                        <div class="card-body">
+                            <div class="card-title">EMBARRASED</div>
+                            <div class="card-text">Embarrassment feels like burning cheeks, a pounding heart, and a wish to hide after a slip-up in front of others. You may replay it endlessly. It signals that you care about belonging, yet most people forget such moments very quickly..</div>
+                            <br>
+                            <button class="btn btn-danger btn-sm" id="embarrassed"><a href="#solutions" class="marks">That's me!</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 p-3">
+                    <div class="card text-white fw-bold mood15">
+                        <div class="card-body">
+                            <div class="card-title">FRUSTRATED</div>
+                            <div class="card-text">Frustration feels like tension and irritation when something blocks your goal or keeps going wrong. You may sigh, snap, or even want to give up. It signals that effort and expectations are not matching results, so reset and try again.</div>
+                            <br>
+                            <button class="btn btn-danger btn-sm" id="frus"><a href="#solutions" class="marks">That's me!</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 p-3">
+                    <div class="card text-white fw-bold mood16">
+                        <div class="card-body">
+                            <div class="card-title">BLANK</div>
+                            <div class="card-text">A blank state feels like a quiet pause where your mind is empty but still feels heavy due to load on sub conscious mind. You may feel spaced out, numb, or detached. It signals mental overload, exhaustion, or shock needing time to reset.</div>
+                            <br>
+                            <button class="btn btn-danger btn-sm" id="blank"><a href="#solutions" class="marks">That's me!</a></button>
                         </div>
                     </div>
                 </div>
             </div>
-        </header>
-    </body>
+        </div>
+    </section>
+    <br>
+    <br>
+    <br>
+    <section>
+        <div class="container sol">
+            <p id="solutions" class="rounded-4"></p>
+        </div>
+    </section>
+ 
+    <footer class="foot">
+        <p class="mb-0">It's absolutely okay to not be okay. 💙</p>
+    </footer>
+ 
+    <script src="website.js"></script>
+</body>
+ 
 </html>
+ 

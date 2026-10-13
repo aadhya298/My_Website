@@ -1,10 +1,204 @@
+:root{
+    --ink:#1f2a44;
+    --accent:#6c63ff;
+    --accent-2:#ff7a90;
+    --card-radius:20px;
+}
+ 
+html{ scroll-behavior:smooth; }
+ 
 .base{
-    background-image:url("sunset-beach-ai-generated_268835-11222.avif");
+    background-image:url("images (3).jpg");
     background-repeat:no-repeat;
     background-attachment:fixed;
-    background-size: cover;
+    background-size:cover;
+    background-position:center;
+    color:var(--ink);
+    font-family:"Poppins","Segoe UI",system-ui,sans-serif;
+    position:relative;
+}
+/* soft veil so the page background never fights with the content */
+.base::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:rgba(255,255,255,.72);
+    z-index:-1;
+}
+ 
+/* ---------- NAV (the fix) ----------
+   Before: transparent nav inside the header, pushed by a 350px margin,
+   floating over the header image. Now: its own sticky bar with a real
+   background, centred buttons, and a blur effect. */
+.top{
+    background:rgba(20,24,40,.82);
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+    box-shadow:0 4px 18px rgba(0,0,0,.18);
+    display:flex;
+    justify-content:center;
+    gap:14px;
+    padding:12px 16px;
 }
 .options{
-    margin-left: 350px;
+    margin:0;
     border-radius:999px;
+    padding:6px 22px;
+    background:transparent;
+    border:1px solid rgba(255,255,255,.55);
+    color:#fff;
+    letter-spacing:.5px;
+    transition:all .25s ease;
+}
+.options:hover,
+.options:focus{
+    background:linear-gradient(90deg,var(--accent),var(--accent-2));
+    border-color:transparent;
+    color:#fff;
+    transform:translateY(-2px);
+}
+ 
+/* ---------- HERO IMAGE ---------- */
+.head{
+    background-image:url("okayokay.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+    min-height:min(650px,70vh);
+    width:100%;
+    margin:0;
+}
+ 
+/* ---------- INTRO ---------- */
+.intro{
+    background:rgba(255,255,255,.85);
+    border-radius:var(--card-radius);
+    box-shadow:0 10px 30px rgba(31,42,68,.12);
+    padding:32px;
+    margin-top:-60px;
+    position:relative;
+}
+h5{
+    font-variant:small-caps;
+    text-align:center;
+    font-weight:700;
+    font-size:1.4rem;
+}
+h6{
+    text-align:center;
+    color:#5b6480;
+    margin-bottom:1rem;
+}
+.intro p{ line-height:1.8; }
+.intro img{
+    border-radius:20%;
+    object-fit:cover;
+    box-shadow:0 8px 24px rgba(0,0,0,.25);
+    max-width:100%;
+}
+ 
+/* ---------- MOOD CARDS ---------- */
+.card{
+    border:0;
+    border-radius:var(--card-radius);
+    overflow:hidden;
+    min-height:190px;
+    color:#fff;
+    font-family:cursive;
+    box-shadow:0 8px 22px rgba(0,0,0,.2);
+    transition:transform .3s ease, box-shadow .3s ease;
+}
+.card:hover{
+    transform:translateY(-8px) scale(1.02);
+    box-shadow:0 16px 34px rgba(0,0,0,.3);
+}
+.card-body{
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    height:100%;
+    text-shadow:0 1px 4px rgba(0,0,0,.6);
+}
+.card-title{ font-size:1.15rem; letter-spacing:1px; color:red; background-color: black; text-align: center; border-radius: 50px;}
+.card .btn{
+    align-self:flex-start;
+    border-radius:999px;
+    padding:0;
+    border:0;
+    background:linear-gradient(90deg,var(--accent),var(--accent-2));
+}
+ 
+/* dark gradient on every card = readable text on any photo */
+.mood1,.mood2,.mood3,.mood4,.mood5,.mood6,.mood7,.mood8{
+    background-size:cover;
+    background-position:center;
+    font-family:cursive;
+}
+.mood1{ background-image:linear-gradient(to top,rgba(0,0,0,.65),rgba(0,0,0,.1)),url("images.jpg"); }
+.mood2{ background-image:linear-gradient(to top,rgba(0,0,0,.65),rgba(0,0,0,.1)),url("1940837.jpg"); }
+.mood3{ background-image:linear-gradient(to top,rgba(0,0,0,.65),rgba(0,0,0,.1)),url("0818_anxiety-Cog-1000x547.jpg"); }
+.mood4{ background-image:linear-gradient(to top,rgba(0,0,0,.65),rgba(0,0,0,.1)),url("stock-photo-bad-taste.jpg"); }
+.mood5{ background-image:linear-gradient(to top,rgba(0,0,0,.65),rgba(0,0,0,.1)),url("435692d9-8b4b-4f2c-9e9d-47a817e0fc53.jpeg"); }
+.mood6{ background-image:linear-gradient(to top,rgba(0,0,0,.65),rgba(0,0,0,.1)),url("image.webp"); }
+.mood7{ background-image:linear-gradient(to top,rgba(0,0,0,.65),rgba(0,0,0,.1)),url("images (2).jpg"); }
+.mood8{ background-image:linear-gradient(to top,rgba(0,0,0,.65),rgba(0,0,0,.1)),url("images (1).jpg"); }
+.mood9{ background-image:linear-gradient(to top,rgba(0,0,0,.65),rgba(0,0,0,.1)),url("lonely.jpg"); }
+.mood10{ background-image:linear-gradient(to top,rgba(0,0,0,.65),rgba(0,0,0,.1)),url("istockphoto-1658304665-612x612.jpg"); }
+.mood11{ background-image:linear-gradient(to top,rgba(0,0,0,.65),rgba(0,0,0,.1)),url("over.png"); }
+.mood12{ background-image:linear-gradient(to top,rgba(0,0,0,.65),rgba(0,0,0,.1)),url("exc.jpg"); }
+.mood13{ background-image:linear-gradient(to top,rgba(0,0,0,.65),rgba(0,0,0,.1)),url("bore.jpg"); }
+.mood14{ background-image:linear-gradient(to top,rgba(0,0,0,.65),rgba(0,0,0,.1)),url("embarrassed.webp"); }
+.mood15{ background-image:linear-gradient(to top,rgba(0,0,0,.65),rgba(0,0,0,.1)),url("frus.png"); }
+.mood16{ background-image:linear-gradient(to top,rgba(0,0,0,.65),rgba(0,0,0,.1)),url("blank.jpg"); } 
+
+.marks{
+    display:block;
+    padding:.25rem .9rem;
+    text-decoration:none;
+    color:#fff;
+    border-radius:999px;
+}
+.marks:hover{
+    background-color:maroon;
+    color:#fff;
+}
+ 
+/* ---------- SOLUTIONS BOX ---------- */
+/* #sol{
+    background:rgba(255,255,255,.85);
+    border-radius:var(--card-radius);
+    box-shadow:0 10px 30px rgba(31,42,68,.12);
+    padding:32px;
+    margin-top:-60px;
+    position:relative;
+} */
+/* #solutions:empty{ display:none; } */
+ 
+.show{ height:400px; }
+.content{ margin-left:20px; }
+ 
+/* ---------- FOOTER ---------- */
+.foot{
+    background:rgba(20,24,40,.82);
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+    color:#fff;
+    text-align:center;
+    padding:22px 12px;
+    font-size:.95rem;
+}
+ 
+/* ---------- MOBILE ---------- */
+@media (max-width:767px){
+    .intro{ padding:20px; margin-top:-30px; }
+    .intro img{ float:none; display:block; margin:0 auto 16px; }
+}
+.brand{
+    color:white;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+.brand1{
+    color: white;
+    font-family: cursive;
 }
